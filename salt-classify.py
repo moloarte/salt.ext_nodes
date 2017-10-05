@@ -46,7 +46,7 @@ import re
 
 def main():
 	fqdn = sys.argv[1]
-	fragments = re.split(r'\.(?!\d)', fqdn)
+	fragments = fqdn.split('.')
 	my_args = fragments[::-1]
 	getCountry (my_args[0])
 	getCity (my_args[1])
